@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Anagram String</h1>
+    <h1>liner time complexity </h1>
+    <h2>O(n)</h2>
+</body>
+
+<script>
+
+   function anagramString(string1, string2){
+
+    if(string1.length !== string2.length){
+
+        return false
+    }
+
+    let counterstring = {}
+
+    for(let number of string1){
+     counterstring[number] = (counterstring[number] || 0 ) +1
+    }
+
+
+    // console.log(counterstring)
+
+    for(let item of string2){
+
+      if(!counterstring[item]){
+        return false
+
+      }
+
+      counterstring[item] = counterstring[item] -1
+
+
+    }
+    return true;
+
+   }
+
+   let output = anagramString("hello" , "ohlle")
+
+   console.log(output)
+</script>
+</html>
