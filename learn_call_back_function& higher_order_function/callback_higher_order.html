@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learn Call Back Function and higher Order Function</h1>
+</body>
+
+<script>
+
+
+// sum function =>  callback function 
+// masterfunction => higher order function
+
+    let sum=(a,b)=>{
+
+        let add = a +b
+         
+        return add;
+
+
+    }
+
+    // let add = sum(5,10);
+
+
+    let higherorderfunction=(num1,num2,operator)=>{
+
+        return operator(num1,num2)
+
+
+    }
+
+    let callhigherorderfunction =  higherorderfunction(50,10,sum)
+
+    console.log(callhigherorderfunction)
+
+    
+</script>
+</html>
