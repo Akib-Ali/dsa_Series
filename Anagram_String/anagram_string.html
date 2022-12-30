@@ -14,39 +14,38 @@
 
 <script>
 
-   function anagramString(string1, string2){
+  function anagram(str1,str2){
 
-    if(string1.length !== string2.length){
-
-        return false
+    if(str1.length != str2.length){
+    return false;
     }
 
-    let counterstring = {}
+   let countobj = {}
+    for(let letter of str1){
+    countobj[letter] = (countobj[letter] || 0) +1
+   }
+    
+   for(let letter2 of str2){
 
-    for(let number of string1){
-     counterstring[number] = (counterstring[number] || 0 ) +1
+    if(!countobj[letter2]){
+      return false
+
+    }else{
+
+      countobj[letter2]-1
+      
     }
-
-
-    // console.log(counterstring)
-
-    for(let item of string2){
-
-      if(!counterstring[item]){
-        return false
-
-      }
-
-      counterstring[item] = counterstring[item] -1
-
-
-    }
-    return true;
 
    }
 
-   let output = anagramString("hello" , "ohlle")
 
-   console.log(output)
+
+   return true
+
+  }
+
+
+const output = anagram("AKIBALI","ALIAKIB")
+console.log(output)
 </script>
 </html>
