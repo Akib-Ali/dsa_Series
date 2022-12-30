@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Print Upper Case Letter</h1>
+</body>
+</html>
+
+
+<script>
+
+    let name = "Akib Ali Siddiqui SOFTWARE Engineer"
+    //  expected output  = AASSOFTWAREE
+     let uppercaseletter = ["A", "B","C", "D", "E" ,"F", "G", "H","T","R" ,"O","T", "W","R","S"]
+     
+      let output = ""
+     for(let letter of name){
+        uppercaseletter.forEach(element => {
+
+            if(letter == element){
+
+                output = output + letter + " ";
+             }
+            
+        });
+        
+
+     }
+
+     console.log(output)
+
+
+</script>
